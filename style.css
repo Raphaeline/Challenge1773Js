@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+}
+
+body {
+  background-color: #282b30;
+}
+
+nav {
+  background: #36393e;
+  border-radius: 9px;
+  padding: 10px;
+  margin: 10px 100px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  color: white;
+  display: inline-block;
+  list-style: none;
+  font-size: 20px;
+  padding: 2px 10 px;
+  margin: 2px 10px;
+  cursor: pointer;
+  position: relative;
+}
+nav ul li:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #7289da;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.information {
+  background-color: #424549;
+  margin: 20px;
+  padding: 2rem;
+  border-radius: 9px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.photoProfile {
+  width: 200px;
+  height: 200px;
+}
+
+.bioText {
+  width: auto;
+  height: auto;
+}
+
+/* Hobbies */
+#hobbies {
+  display: flex;
+  background-color: #031625;
+}
+#hobbies:hover .tl-item {
+  width: 23.3333%;
+}
+.hb-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  min-height: 600px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.hb-item:before,
+.hb-item:after {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.hb-item:after {
+  background: rgba(3, 22, 37, 0.85);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.hb-item:before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 75%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hb-item:hover {
+  width: 30% !important;
+}
+.hb-item:hover:after {
+  opacity: 0;
+}
+.hb-item:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+.hb-item:hover .hb-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+.hb-item:hover .hb-bg {
+  filter: grayscale(0);
+}
+.hb-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 55%;
+  opacity: 0;
+}
+.hb-content p {
+  font-family: "Pathway Gothic One", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #1779cf;
+  font-weight: normal;
+}
+.hb-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.hb-year p {
+  font-size: 1.728rem;
+  line-height: 0;
+}
+.hb-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+/*hobies end*/
+
+/* EndBar */
+
+.EndBar {
+  background-color: black;
+  position: relative;
+  text-align: center;
+}
+
+.EndBar-Text {
+  color: white;
+  padding: 10px;
+}
