@@ -1,2 +1,2 @@
-# DASKOM 1337
+# MaiAiOne
 2nd Challenge In Daskom1337 Community
